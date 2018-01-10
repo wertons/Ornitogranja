@@ -1,1 +1,2 @@
 # Ornitogranja
+Es un projecte per el concurs WEBSALPUNT, el projecte en si es una pagina web amb un videojoc integrat de estil pet simulator en el que cuides de un ornitorrinc. Ve incluit amb informacio sobre ornitorrincs, una tenda de productes sobre aquests y que intenta donar llum a una especie unica en el mon que es troba en seri perill.
