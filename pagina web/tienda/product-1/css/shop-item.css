@@ -6,10 +6,27 @@
 
 body {
   padding-top: 54px;
+    background-color: fuchsia;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
+}
+#button {
+    height: 15%;
+    width: 15%;
+    float: right;
+    margin-right: 5%; 
+    padding: 2%;
+}
+#button:hover {
+    height: 15%;
+    width: 15%;
+    float: right;
+    margin-right: 5%;  
+    border: 1px black solid;
+     padding: 2%;
+    border-radius: 20%;
 }
