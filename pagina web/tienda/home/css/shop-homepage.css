@@ -1,15 +1,250 @@
-/*!
- * Start Bootstrap - Shop Homepage (https://startbootstrap.com/template-overviews/shop-homepage)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
- */
-
 body {
-  padding-top: 54px;
+     padding-top: 54px;
+     background-image: url(../img/background1.jpg) ;
+     background-repeat: background-attachment;
+     background-size: ;
+     background-attachment: fixed;
+     background-position: center fixed;
+}
+ @media (min-width: 992px) {
+     body {
+         padding-top: 56px;
+    }
+}
+ .carrito {
+     height:85%;
+     width: 85%;
+     float: right;
+     margin-right: 5%;
+     padding: 2%;
+}
+ #logo{
+     height: 50%;
+     width: 50%;
+}
+ .floatright {
+     float: right;
+}
+ .floatleft {
+     float: left;
+}
+ .floatcenter{
+     float: center;
+     vertical-align: center;
+}
+ .aligncenter{
+     text-align: center;
+     vertical-align: center;
+     color:white;
+}
+/* Popup container */
+ .popup {
+     position: relative;
+     display: inline-block;
+     cursor: pointer;
+     float: right;
+     width: 20%;
+     background-color: #363639;
+     margin-right: 4%;
+     margin-top: 3%;
+     background-color: ;
+     border-radius: 2%;
+     color: white;
+}
+ .popup:hover{
+     background-color: #395230;
+     color: white;
+}
+/* el propio popup(no el boton) */
+ .popup .popuptext {
+     visibility: hidden;
+     background-color: #555;
+     color: #fff;
+     text-align: center;
+     border-radius: 6px;
+     padding: 8px 0;
+     position: absolute;
+     z-index: 1;
+     bottom: 125%;
+     left: 50%;
+     margin-left: -80px;
+}
+/* flecha del popup */
+ .popup .popuptext::after {
+     content: "";
+     position: absolute;
+     top: 100%;
+     left: 50%;
+     margin-left: -5px;
+     border-width: 5px;
+     border-style: solid;
+     border-color: #555 transparent transparent transparent;
+}
+/* mostrar esconder el popup */
+ .popup .show {
+     visibility: visible;
+     -webkit-animation: fadeIn 1s;
+     animation: fadeIn 1s 
+}
+/* fade animation */
+ @-webkit-keyframes fadeIn {
+     from {
+        opacity: 0;
+    }
+     to {
+        opacity: 1;
+    }
+}
+ @keyframes fadeIn {
+     from {
+        opacity: 0;
+    }
+     to {
+        opacity:1 ;
+    }
+}
+ .borderbottom{
+     border-bottom: 2px solid black;
+}
+ .dark{
+     background-color: black;
+}
+/* modal fondo */
+ .modal {
+     display: none;
+    /* hidden by default */
+     position: fixed;
+     z-index: 1;
+    /* Sit on top of other boxes */
+     left: 0;
+     top: 0;
+     width: 100%;
+    /* Full width */
+     height: 100%;
+    /* Full height */
+     overflow: auto;
+    /* Enable scroll if needed */
+     background-color: rgb(0,0,0);
+    /* Fallback color */
+     background-color: rgba(0,0,0,0.4);
+    /* Black w/ opacity */
+}
+/* Modal Contentx */
+ .modal-content {
+     background-color: rgb(175, 0, 0);
+     margin: 10% auto;
+    /* 15% from the top and centered */
+     padding: 20px;
+     border: 2px solid #950303;
+     width: 60%;
+     color: ghostwhite;
+     font-size: 1.1em;
+}
+/* button close */
+ .close {
+     color: #aaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+}
+ .close:hover, .close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+}
+ #closebutton {
+     width:;
+     float: right;
+}
+ .textfloatleft {
+     float: left;
+}
+ .nav-link{
+     font-size: 1.5em;
+}
+ * {
+     box-sizing: border-box;
+}
+/* Position the image container (needed to position the left and right arrows) */
+ .container {
+     position: relative;
+}
+/* Hide the images by default */
+ .mySlides {
+     display: none;
+}
+/* Add a pointer when hovering over the thumbnail images */
+ .cursor {
+     cursor: pointer;
+}
+/* On hover, add a black background color with a little bit see-through */
+ .prev:hover, .next:hover {
+     background-color: rgba(0, 0, 0, 0.8);
+}
+ .row:after {
+     content: "";
+     display: table;
+     clear: both;
+}
+/* Six columns side by side */
+ .column {
+     float: left;
+     width: 16.66%;
+}
+/* Add a transparency effect for thumnbail images */
+ .demo {
+     opacity: 0.6;
+}
+ .active, .demo:hover {
+     opacity: 1;
+}
+.dropbtn {
+    background-color: rgba(0,0,0,0);
+    color: white;
+    width: 2.3em;
+    height: 2.3em;
+    border: none;
+    cursor: pointer;
+    background-image: url(../img/cart-1.png);
+    background-size: contain;
+    margin-top: 7px;
 }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
+.dropbtn:hover, .dropbtn:focus {
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 185px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid gray;
+    border-radius: 5%;
+    right: 0;
+
+    
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+.semitransparent {
+    background-color: rgba(255, 255, 255, 0.85);
 }
