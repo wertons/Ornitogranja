@@ -1,0 +1,183 @@
+/*	Form styles
+-------------------------------------------------------------- */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	    margin: 0; 
+	}
+	button, input[type="text"], .input-text, input[type="password"], input[type="email"], .styled-select, textarea { border:1px solid #C1C1C1; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; line-height:1.3}
+	input[type="text"], .input-text, input[type="password"], select, textarea { padding:10px 5px 9px 8px; -webkit-appearance: none;}
+	label input, label textarea, label select { display: block}
+	.styled-select {
+		overflow: hidden; height: 34px;
+		background: url(../images/select_arrow.png) no-repeat 5px center; background-color:#fff; background-size: 14px 13px;
+		-moz-transition: background 0.4s ease-in; -webkit-transition: background 0.4s ease-in; -o-transition: background 0.4s ease-in;
+	}
+	.styled-select:hover { background-image: url(../images/select_arrow_hover.png);  background-size: 14px 13px;}
+	.styled-select select {
+		background: transparent; padding:11px 0px 8px 20px;
+		line-height:1; border:0;
+	}
+	input[type="checkbox"], input[type="radio"] {
+		*margin-top: 0;
+		background-color: transparent;
+		border: 0 \9;
+		float:left;
+	}
+	label.radio, label.checkbox {  padding-left: 0px; float:left; line-height:1.3!important; margin:0px 6px 0px 4px!important}
+	
+	input[type="text"], input[type="password"], input[type="email"], input[type="tel"] { width:270px}
+	textarea, .form_line input[type="text"], .widget input[type="text"], .widget input[type="password"], .widget input[type="email"], .widget input[type="tel"], .widget .styled-select { width:100%}
+	.styled-select select { width:108%;}
+	
+	textarea { height:212px;}
+	
+	input[type="radio"]:focus, input[type="checkbox"]:focus, select:focus {
+		outline: thin dotted #333; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px;
+	}
+	form p { margin:0}
+		
+/*	Buttons
+-------------------------------------------------------------- */
+	#content button, #content input[type="button"], #content input[type="submit"], #content input[type="reset"], #content input[type="radio"], #content input[type="checkbox"] { width: auto; height: auto}
+	#content input[type="submit"], #content input[type="file"], #content button, .jigoshop_product_search #searchsubmit, .wpsc_buy_button, a.gocheckout, .submitbutton, .input-submit, #submit, .button-alt, .simplicity_button/*, .simplemodal-close*/ {
+		padding:0 20px 0 18px !important;
+		height:35px !important;
+		border:0 !important;
+		-webkit-border-radius: 2px !important; -moz-border-radius: 2px !important; border-radius: 2px !important;
+		line-height: 35px !important;
+		margin:0 5px 0 0;
+	}
+	a.gocheckout { clear:inherit}
+	.submitbutton + a, .input-submit + a.forgot {
+		 padding:8px 0px 10px 13px; margin-left:10px;
+	}
+
+/*	Newsletter
+-------------------------------------------------------------- */
+	.widget_feedburner label, .widget_wpsc_product_specials label { line-height:1.3; display:block; margin-bottom:6px;}
+	.widget_feedburner input[type="text"] {
+		background: url(../images/mail_icon.png) no-repeat 10px 8px #fff; background-size: 29px 19px;
+		padding-left:49px; margin-bottom:8px;
+	}
+	
+/*	Search
+-------------------------------------------------------------- */
+	.widget_search label.screen-reader-text { display:none}
+	.widget_search #searchform { position:relative;}
+	.widget_search #s {
+		margin-bottom:0; padding-left:48px;
+		width:100%;
+	}
+	.widget_search #searchsubmit {
+		position: absolute; z-index:1; left:10px; top:10px;
+		display:block; overflow:hidden; text-indent:-1000em;
+		width:16px; height:16px;
+		border:0;
+		-moz-transition: background 0.4s ease; -webkit-transition: background 0.4s easen; -o-transition: background 0.4s ease;
+		}
+		.widget_search #searchform:before {
+			position: absolute; left: 35px; top: 6px;
+			display:block; content: '|'; z-index:1;
+	}
+		
+	
+/*	Commentform
+-------------------------------------------------------------- */	
+	#commentform { padding-left:1px}
+	#commentform p { margin-bottom:0}
+	#commentform p + p { margin-top:0}
+	#commentform p.logged-in-as { margin-bottom:11px}
+	
+	#commentform p.form-submit { margin-top:17px}
+	#commentform input#submit { padding:0px 20px 0px 18px}
+	
+	#commentform input[type="text"] { width:318px; margin-bottom:7px}
+	
+	#commentform textarea { width:700px; height:212px;}
+	div.pp_woocommerce .pp_content_container #commentform textarea { width:100%; height:212px; display: block; margin-top: 15px;}
+	div.pp_woocommerce .pp_content_container .pp_left {padding-left: 40px;}
+	div.pp_woocommerce .pp_content_container #reply-title{margin-top: 0;}
+
+	#commentform input#author { background-image: url(../images/name_icon.png); background-size: 29px 19px;}
+	#commentform input#email { background-image: url(../images/mail_icon.png); background-size: 29px 19px;}
+	#commentform input#url { background-image: url(../images/website_icon.png); background-size: 29px 19px;}
+	#commentform input#author, #commentform input#email, #commentform input#url { background-repeat:no-repeat; background-position:10px 8px; padding-left:49px}
+	
+	.commentlist #respond h3#reply-title { margin:30px 0px 12px 0px;}
+	.commentlist #respond textarea { width:99%;}
+	
+	#reply-title small { float:right; zoom:1; font-size:14px; line-height: 3.5; padding:0px 6px 0px 0px; font-family: Georgia, "Times New Roman", Times, serif; letter-spacing:normal;}
+
+/*	Contact form
+-------------------------------------------------------------- */
+	.contact-form, .ox-contact-form { padding-top:6px}
+	.contact-form + p, .ox-contact-form + p { margin:0}
+	.contact-form label.name, .contact-form label.email, .contact-form label.url, .contact-form label.textarea,	sup.required, .ox-contact-form label.name, .ox-contact-form label.email, .ox-contact-form label.url, .ox-contact-form label.textarea {
+		font-style: normal; font-size:12px; font-family:Arial, Helvetica, sans-serif;
+	}
+	.contact-form .form_line, .form_line_textarea, .ox-contact-form .form_line {position:relative}
+	.contact-form .form_line, .ox-contact-form .form_line { padding-right:1px}
+	.form_line label { line-height:1;}
+	
+	.contact-form .form_line, .ox-contact-form .form_line { margin-bottom:7px}
+	.contact-form .form_line_textarea, .ox-contact-form .form_line_textarea { margin-bottom:11px}
+	
+	label.error {
+		position:absolute; right:5px; top:3px;
+		overflow:hidden; content:none!important; display:block!important;
+		width:23px; height:23px; 
+		background: url(../images/error.png) no-repeat 0 0; background-size: 23px 23px;
+		text-indent:-1000em; text-align:left;
+		z-index:111;
+	}	
+	.form_line > label.error:before, .ox-contact-form .form_line > label.error:after {content:none!important; display: inherit!important;}
+	
+	
+	
+	input + label.error { top:6px;}
+	
+	.contact-form input.name, .ox-contact-form input.name { background-image: url(../images/name_icon.png);  background-size: 29px 19px;}
+	.contact-form input.email, .ox-contact-form input.email { background-image: url(../images/mail_icon.png); background-size: 29px 19px;}
+	.contact-form input.url, .ox-contact-form input.url { background-image: url(../images/website_icon.png); background-size: 29px 19px;}
+	.contact-form input.name, .contact-form input.email, .contact-form input.url, .ox-contact-form input.name, .ox-contact-form input.email, .ox-contact-form input.url { background-repeat:no-repeat; background-position:10px 8px; padding-left:49px}
+	.contact-form .simplicity_button, .ox-contact-form .simplicity_button { font-size:13px; height:45px; padding: 0 21px 0 24px}
+	
+	.contact_area .column_1 { width:459px}
+	.contact_area .column_2 { margin-left:68px; line-height:1.5}
+	.contact_area .column_2 h3 { margin-bottom:22px}
+	.contact_area .column_2 .column_1, .contact_area .column_2 .column_2 {
+		width:130px; padding-left:4px; margin:2px 0px 49px 0px;
+		min-height: 64px; height: auto!important; height: 64px;
+	}
+	.contact_area .column_2 .column_2 { width:140px; padding-left:39px; margin-left:48px; border-left:1px solid #efefef}
+	
+	.widget_contactform div { position:relative}
+	
+	.contactformWidget { padding-left:2px}
+	.contactformWidget > div + div { margin-top:5px}
+
+	.widget_contactform textarea { height:95px}
+	.widget_contactform input[type="text"] { background-repeat:no-repeat; background-position:9px 7px; padding-left:49px}
+	.widget_contactform input.name { background-image: url(../images/name_icon.png); background-size: 29px 19px;}
+	.widget_contactform input.email { background-image: url(../images/mail_icon.png); background-size: 29px 19px;}
+	.contact-form input.url, .ox-contact-form input.url { background-image: url(../images/website_icon.png); background-size: 29px 19px;}
+
+	/*recaptcha*/
+	.th_contact-form .th_contact-submit.captcha1, .contact-form .th_contact-submit.captcha1 { margin-top: -8px;padding-top: 0;padding-bottom: 0; }
+
+	.recaptcha_wrap {padding:13px 22px 5px 15px;float: left;}
+	.recaptcha_wrap>div {overflow: hidden}
+	.recaptcha_logo {background: url('../images/recaptcha_logo.png') no-repeat 0 0;width: 71px;height: 36px;float: left;margin: 12px 18px 0 0}
+	#recaptcha_image {float: left;border: 1px solid #e5e5e5;background: #fff;line-height: 80%}
+	 #recaptcha_image br {display: none;}
+	 #recaptcha_image embed {margin-top: -20px}
+	#recaptcha_image img {display: block}
+	#recaptcha_image span {display: block;margin: 7px 5px 0;text-align: center}
+	.recaptcha_tagline {background: url('../images/recaptcha_tagline.png') no-repeat 0 0;width: 71px;height: 17px;float: left;margin: 12px 18px 0 0}
+	#recaptcha_response_field {float: left;width: 220px;margin-top: 4px;margin-right: 5px}
+	.recaptcha_reload, .recaptcha_only_if_image, .recaptcha_only_if_audio, .recaptcha_help {float: left;width: 12px;height: 12px;margin-left: 11px;margin-top: 16px}
+	.recaptcha_reload a, .recaptcha_only_if_image a, .recaptcha_only_if_audio a, .recaptcha_help a {float: left;width: 12px;height: 12px;display: block;background: url('../images/recaptcha_icons.png') no-repeat 1px 0; font-size: 0; color: transparent;}
+	.recaptcha_only_if_image a {background-position: -21px 0;}
+	.recaptcha_help a {background-position: -43px 0}
+	.recaptcha_only_if_audio a {background-position: -59px 0}

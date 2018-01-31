@@ -1,0 +1,14 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  if (!_satellite.getVar('Selenium Testing') && _satellite.getVar('BounceEx Off') !== 'true') { 
+  //prevent bouncex from executing if this cookie is present, only selenium and 
+  //web perf tests should be passing the param
+  (function(w, d, s) {   
+  var fjs = d.getElementsByTagName(s)[0],
+      js = d.createElement(s);
+  js.type = 'text/javascript';
+  js.async = true;
+  js.src = ('https:' == d.location.protocol ? 'https:' : 'http:') +  '//bounceexchange.com/tag/1008/i.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(window, document, 'script'));
+}
+});

@@ -1,0 +1,17 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  (function(d, s) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  js = d.createElement(s); 
+  js.src = "/javascript/pkg/vendors/le-mtagconfig.js?v3";
+  js.onload = function() {
+    var js2, fjs2 = d.getElementsByTagName(s)[0];
+    js2 = d.createElement(s);
+    js2.src = "//lpcdn.lpsnmedia.net/api/chat/public/lpChat.min.js";
+    fjs2.parentNode.insertBefore(js2, fjs2);
+    js2.onload = function() {
+      $.publish('lp.sdk.loaded');
+    };
+  };
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script'));
+});

@@ -1,0 +1,10 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  $.subscribe('tag.addtocart.itemAdded', function(miniCartData) {
+  fbq('track', 'AddToCart',
+      {
+        content_ids: _.pluck(miniCartData, 'sku'),
+        content_type: 'product'
+      }
+    ); 
+});
+});

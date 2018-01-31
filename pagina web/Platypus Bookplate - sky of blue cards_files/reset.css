@@ -1,0 +1,100 @@
+/*	HTML5 display definitions
+-------------------------------------------------- */
+	article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary {
+		display: block;
+	}
+	audio,canvas,video { display: inline-block;}
+	audio:not([controls]) { display: none; height: 0;}
+	[hidden] { display: none;}
+
+/*	Base
+-------------------------------------------------- */
+	html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+	body { width:100%; margin: 0;}
+
+/*	Links
+-------------------------------------------------- */
+	a:active, a:hover, :focus { outline: 0;}
+	a, a:hover { text-decoration:none;}
+
+/*	Typography
+-------------------------------------------------- */
+	h1, h2, h3, h4, h5, h6 {
+		margin:0; line-height:1.25;
+	}
+	
+	figure { position:relative; margin: 0}
+	
+	abbr[title] { border-bottom: 1px dotted;}
+	b, strong { font-weight: bold}
+	dfn { font-style: italic;}
+	mark { background: #ff0; color: #000;}
+	code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em;}
+	pre {
+		white-space: pre;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+	}
+		blockquote, q 	{ quotes: none;}
+		blockquote:before, blockquote:after, q:before, q:after { content:'';}
+	
+	small { font-size:70%; font-style: normal;}
+	
+	sub,sup {
+		font-size: 75%; font-family:Arial, Helvetica, sans-serif;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+	sup { top: -0.5em}
+	sub { bottom: -0.25em}
+
+	hr { clear:both; margin:2em 0; height:1px; border:0; background:#e3e3e3; page-break-after:always; line-height:0;}
+	
+/*	List
+-------------------------------------------------- */	
+	li ul,
+	li ol 	{ margin: 0}
+	ul, ol  { padding-left:0;}
+	.lt-ie9 ul, .lt-ie9 ol { padding-left: 25px}
+	/*li 		{ vertical-align: top; margin-bottom:10px}*/
+
+/* table
+-------------------------------------------------- */
+	table { border-collapse: collapse; border-spacing: 0;}
+
+/*	Embedded content
+-------------------------------------------------- */
+	img { margin: 0; border: 0; -ms-interpolation-mode: bicubic}
+	svg:not(:root) { overflow: hidden}
+	object { max-width: 100%}
+
+/* Forms
+-------------------------------------------------- */
+	fieldset { padding:0; border:0;}
+	legend { display:block; padding:2px 0px 10px; border: 0; white-space: normal;}
+	.lt-ie9 legend { margin-left: -7px;}
+	label, button, input, select, textarea { vertical-align: baseline;}
+	.lt-ie9 label, .lt-ie9 button, .lt-ie9 input, .lt-ie9 select, .lt-ie9 textarea { vertical-align: middle;}
+	
+	button, input, select, textarea {
+		margin: 0;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		-moz-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in;
+		/*font-family: inherit; font-size: 100%;*/
+	}
+	button,input { line-height: normal;}
+	button, html input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible;}
+	button[disabled], input[disabled] { cursor: default;}
+	input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;}
+	input[type="search"]::-webkit-search-cancel-button,	input[type="search"]::-webkit-search-decoration { -webkit-appearance: none;}
+	input:invalid, textarea:invalid { background-color: #f0dddd}
+	button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0}
+	input:focus, textarea:focus { outline: 0; outline: thin dotted \9}
+	select[multiple], select[size] { height: auto}
+	
+	textarea { overflow: auto; vertical-align: top; resize: vertical;}
+
+/*
+-------------------------------------------------- */
+	.chromeframe { margin: 0.3em 0; padding:0.5em 10px; background: #ccc; color: black; text-align:center;}

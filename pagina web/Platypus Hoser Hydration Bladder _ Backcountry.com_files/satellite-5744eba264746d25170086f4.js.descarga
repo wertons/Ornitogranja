@@ -1,0 +1,32 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  
+      $.subscribe('tag.addtocart.itemAdded', function(commerceItems, orderTotal) {
+		  var items = [];
+		  var totalItems = 0;
+		  var orderTotal = 0; //temporally disabled due to missing info
+		  commerceItems.forEach(
+		    function(item) {
+		      items.push({
+		          product: {
+		                name: $("<div>").html(item.itemName).html(),
+		                category: $("<div>").html(item.categoryName).html(),
+		                sku: item.productId,
+		                price: parseFloat(item.detailedUnitPrice)
+		            },
+		            quantity: parseInt(item.quantity)
+		        });
+		        totalItems += item.quantity;
+            orderTotal += parseFloat(item.detailedUnitPrice) * parseInt(item.quantity);
+		  });
+
+		  //cart 
+		  lpTag.sdes = lpTag.sdes||[];
+		  lpTag.sdes.push({       
+		    type: "cart",
+        total: orderTotal,
+		    numItems: totalItems,  
+		    products: items
+		  });
+      });
+
+});

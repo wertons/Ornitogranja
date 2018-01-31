@@ -1,0 +1,246 @@
+
+jQuery(document).ready(function(){
+	// initiate page scroller plugin
+	/*jQuery('#nav, #menu-footer-navigation-menu').onePageNav({
+		begin: function() {
+		console.log('start')
+		},
+		end: function() {
+		console.log('stop')
+		},
+		
+    	filter: ':not(.external a)'
+	});*/
+	
+	/* Title shopping cart */	
+	/*widget_shopping_cart*/
+	jQuery('.extratitle .widget_shopping_cart').before(jQuery('.extratitle .widget_shopping_cart .widgettitle').addClass('title_shopping_cart_button'));
+	jQuery('.extratitle .widget_shopping_cart .widgettitle').remove();
+
+	jQuery('.extratitle .jigoshop_cart').before(jQuery('.extratitle .jigoshop_cart .widgettitle').addClass('title_shopping_cart_button'));
+	jQuery('.extratitle .jigoshop_cart .widgettitle').remove();
+
+	jQuery('.extratitle .widget_wpsc_shopping_cart').before(jQuery('.extratitle .widget_wpsc_shopping_cart .widgettitle').addClass('title_shopping_cart_button'));
+	jQuery('.extratitle .widget_wpsc_shopping_cart .widgettitle').remove();
+
+	jQuery('.extratitle > h3.widgettitle').prepend('<span class="add_to_cart_button" />');
+	
+	// form - new select styles
+	jQuery('select:not("#billing_state, #billing_country, #shipping_country, #shipping_state, #rating, #calc_shipping_country, #calc_shipping_state, #billing-country, #billing-state, #shipping-country, #shipping-state, #shipping_method")').wrap('<div class="styled-select" />');
+	//jQuery('.styled-select select').removeClass('country_to_state form-row-first update_totals_on_change country_select chzn-done');
+
+	// date add this - 19.09.2012 
+	jQuery('.widget li, ul.ox_list_animated li').prepend('<span class="widget_mark" />');
+							
+	//cart dropdown
+	var config = {
+		 over: function(){
+			jQuery('.extratitle .widget_shopping_cart, .extratitle .jigoshop_cart, .extratitle .widget_wpsc_shopping_cart').css('display','block').animate({opacity:1}, 200);
+		},
+		 timeout: 200,
+		out: function(){
+			
+			jQuery('.extratitle .widget_shopping_cart, .extratitle .jigoshop_cart, .extratitle .widget_wpsc_shopping_cart').animate({opacity:0}, 200, function(){						
+				jQuery(this).css('display','none')
+			});
+		 }
+	};
+	
+	jQuery(".extratitle").hoverIntent( config );
+	
+	/*	Lightbox */
+	jQuery("a[data-pp^='lightbox']").prettyPhoto({
+		theme: 'light_square',
+		overlay_gallery: false,
+		social_tools:'',
+		deeplinking: false
+	});
+	
+	/*filters */
+	jQuery('.filters').find('ul a').click(function(){
+		if ( !jQuery(this).hasClass('selected') ) {
+			jQuery(this).parents('ul').find('.selected').removeClass('selected');
+			jQuery(this).addClass('selected');
+        }
+	});
+	
+
+/*Top line shopping cart*/
+	var config = {
+		 over: function(){
+			jQuery('.topline_shopping_cart').css('display','block').animate({opacity:1}, 200);
+		},
+		 timeout: 200,
+		out: function(){
+			
+			jQuery('.topline_shopping_cart').animate({opacity:0}, 200, function(){						
+				jQuery(this).css('display','none')
+			});
+		 }
+	};
+	jQuery(".topline_cart").hoverIntent( config );
+	
+	if(jQuery('.topline_shopping_cart.widget_shopping_cart').length) {
+		jQuery('body').bind('adding_to_cart', function(){
+			jQuery('.extratitle .widget_shopping_cart').attr('style', 'opacity: 0!important');
+		});
+		jQuery('body').bind('added_to_cart', function(){
+			jQuery('.extratitle .widget_shopping_cart').attr('style', 'opacity: 0');
+			
+		});
+	}
+	if(jQuery('.extratitle .widget_shopping_cart').length) {
+		jQuery('.add_to_cart_button').click(function(){
+			//jQuery('.extratitle .widget_shopping_cart').css({'display': 'block'});
+			jQuery('.extratitle .widget_shopping_cart').fadeIn(1000);
+		});
+	}
+	if(jQuery('.topline_shopping_cart.widget_shopping_cart').length) {
+		jQuery('.add_to_cart_button').click(function(){
+			//jQuery('.topline_shopping_cart.widget_shopping_cart').css({'display': 'block'});
+			jQuery('.topline_shopping_cart.widget_shopping_cart').fadeIn(1000);
+		});
+	}
+
+
+		jQuery('.home .section').parallax("50%", 0.05);
+		
+		
+		// fading out/in slider stuff
+		var fadeStart=100 // 100px scroll or less will equiv to 1 opacity
+			,fadeUntil=500 // 200px scroll or more will equiv to 0 opacity
+			,fading = jQuery('.stuff2')
+		;
+		
+		jQuery(window).bind('scroll', function(){
+			var offset = jQuery(document).scrollTop()
+				,opacity=0
+			;
+			if( offset<=fadeStart ){
+				opacity=1;
+			}else if( offset<=fadeUntil ){
+				opacity=1-offset/fadeUntil;
+			}
+			fading.css('opacity',opacity);
+		});
+		
+
+		/* adipoli effects an one + */
+		
+		jQuery('.clients img').adipoli({
+			'startEffect' : 'grayscale',
+			'hoverEffect' : 'normal'
+		}); 
+		
+
+		/* folio hover */
+			
+		jQuery('#portfolio-list,ul.block').on('mouseenter', 'li', function() {
+			jQuery(this).find('img.attachment-folio').stop(true, true).animate({'opacity': '0.8'}, {duration:350});
+	
+		});
+	
+		jQuery('#portfolio-list,ul.block').on('mouseleave', 'li', function() {
+			jQuery(this).find('img.attachment-folio').stop(true, true).animate({'opacity': '1'}, {duration:350});                           
+		});  
+
+		jQuery('ul.block').on('mouseenter', 'li', function() {
+			jQuery(this).find('.inside').stop(true, true).animate({'opacity': '1'}, {duration:350});
+	
+		});
+	
+		jQuery('ul.block').on('mouseleave', 'li', function() {
+			jQuery(this).find('.inside').stop(true, true).animate({'opacity': '1'}, {duration:500});                           
+		}); 
+
+		/* wp gallery hover */	
+				
+		jQuery('.imgwrap').hover(function() {
+			jQuery(this).find('a.hoverstuff-link,a.hoverstuff-zoom')
+				.animate({
+					opacity: '1', 	
+				}, 100); 
+		
+			} , function() {
+		
+			jQuery(this).find('a.hoverstuff-link,a.hoverstuff-zoom')
+				.animate({
+					opacity: '0', 	
+				}, 400); 
+		});
+
+		jQuery('ul.block li').hover(function() {
+			jQuery(this).find('img')
+				.animate({
+					opacity: '.5', 	
+				}, 100); 
+		
+			} , function() {
+		
+			jQuery(this).find('img')
+				.animate({
+					opacity: '.8', 	
+				}, 400); 
+		});
+
+
+
+	/* Tooltips */
+		jQuery("body").prepend('<div class="tooltip"><p></p></div>');
+		var tt = jQuery("div.tooltip");
+		
+		jQuery(".flickr_badge_image a img,ul.social-menu li a").hover(function() {								
+			var btn = jQuery(this);
+			
+			tt.children("p").text(btn.attr("title"));								
+						
+			var t = Math.floor(tt.outerWidth(true)/2),
+				b = Math.floor(btn.outerWidth(true)/2),							
+				y = btn.offset().top - 30,
+				x = btn.offset().left - (t-b);
+						
+			tt.css({"top" : y+"px", "left" : x+"px", "display" : "block"});			
+			   
+		}, function() {		
+			tt.hide();			
+		});
+
+
+	/* Resize too large images */
+	var size = 614;
+	var image = jQuery('.entry img');
+	
+	for (i=0; i<image.length; i++) {
+		var bigWidth = image[i].width;
+		var bigHeight = image[i].height;
+	
+		if (bigWidth > size) {	
+			var newHeight = bigHeight*size/bigWidth;
+			image[i].width = size;
+			image[i].height = newHeight;
+		}
+	}
+
+
+	function lightbox() {
+		// Apply PrettyPhoto to find the relation with our portfolio item
+		jQuery("a[rel^='prettyPhoto']").prettyPhoto({
+			// Parameters for PrettyPhoto styling
+			animationSpeed:'fast',
+			slideshow:5000,
+			theme:'pp_default',
+			show_title:false,
+			overlay_gallery: false,
+			social_tools: false
+		});
+	}
+	
+	if(jQuery().prettyPhoto) {
+		lightbox();
+	}
+	
+	jQuery( ".single-product .shipping-calculator-button" ).click(function() {
+		jQuery( ".shop_table .actions input.button" ).click();
+	});
+
+});
