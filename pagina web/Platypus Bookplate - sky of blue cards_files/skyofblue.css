@@ -1,0 +1,44 @@
+/*
+ * SimpleModal Login - WordPress Modal Ajax Login
+ * Theme: skyofblue
+ * Copyright (c) 2010 Eric Martin http://www.ericmmartin.com
+ */
+
+#simplemodal-login-overlay {background-color:#3a3a38;}
+#simplemodal-login-container {width:455px; color:#888888;}
+#simplemodal-login-container .message,
+#simplemodal-login-container #login_error {background-color: #ffebe8; border:1px solid #c00; margin-bottom:8px; padding:6px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+#simplemodal-login-container .message {background-color:#ffffe0; border-color:#e6db55;}
+#simplemodal-login-container .simplemodal-login-fields { padding:0 95px; }
+#simplemodal-login-container #simplemodal-login-form { display:inline-block; background:#dddddd; border:1px solid #e5e5e5; font-weight:normal; margin-left:0 auto; padding:0; text-align:left; -moz-border-radius:11px; -webkit-border-radius:11px; border-radius:5px; -moz-box-shadow:rgba(32,32,32,1) 0 4px 18px; -webkit-box-shadow:rgba(32,32,32,1) 0 4px 18px; box-shadow:rgba(32,32,32,1) 0 4px 18px;}
+#simplemodal-login-container #loginform, #simplemodal-login-container #wpcf7-f2214-o2 form { background-color:#fff; width: 455px; padding:0 0 30px; }
+#simplemodal-login-container #wpcf7-f2214-o2 form { padding:0 0 0; }
+#simplemodal-login-container #simplemodal-login-form label, #simplemodal-login-container #wpcf7-f2214-o2 form label {color:#888888; font-size:12px; float:none; max-width:265px;}
+#simplemodal-login-container #simplemodal-login-form p, #simplemodal-login-container #wpcf7-f2214-o2 form p {margin:0;}
+#simplemodal-login-container #simplemodal-login-form .forgetmenot {font-size:11px; font-weight:normal; float:left; line-height:19px; margin-bottom:0;}
+#simplemodal-login-container #simplemodal-login-form .submit input, #simplemodal-login-container #simplemodal-login-form .wpcf7-submit { text-transform:uppercase; background-color:#1a9be2; font-family:Arial; font-size:14px !important; border:none; border:1px solid; color:#fff; font-weight:normal; padding:3px 15px 3px 10px; -moz-border-radius:11px; -webkit-border-radius:11px; border-radius:11px; cursor:pointer; text-decoration:none; margin-top:-3px;}
+#simplemodal-login-container #simplemodal-login-form .wpcf7-submit { float:right; margin: 0; }
+#simplemodal-login-container #wpcf7-f2214-o2 .wpcf7-submit { float:none; }
+#simplemodal-login-container #simplemodal-login-form .nav { float:none; margin: 0 0 10px; padding: 0; }
+#simplemodal-login-container #simplemodal-login-form .submit {float:none; width:100%; display:inline-block; margin:15px 0 0; }
+#simplemodal-login-container #simplemodal-login-form .submit input.simplemodal-close { background-color:#c00;}
+#simplemodal-login-container .title { background-color:#ddd; color:#2594d2; font-size:41px; padding:20px 0; text-align:center; border-bottom:1px solid #949494; }
+#wpcf7-f2214-o2 .title { font-size:32px; margin-bottom:10px;}
+#lostpasswordform .title { border:none; text-transform:lowercase; }
+#lostpasswordform .submit input.simplemodal-close { margin-top: 10px !important; }
+#simplemodal-login-container .nav {clear:both; color:#888; padding-top:16px; text-align:center;}
+#simplemodal-login-container .nav a {color:#888;}
+#simplemodal-login-container .reg_passmail {clear:both; color:#666; font-weight:bold; padding-bottom:16px; text-align:center;}
+#simplemodal-login-container h3 { color:#5d5c5c; font-size:14px; font-weight:bold; margin:25px auto 15px auto; width:265px; }
+#simplemodal-login-container #wpcf7-f2214-o2 form h3 { border-top:1px solid #949494; width:100%; text-align:center; padding:10px 0; background-color:#ddd; margin:15px 0 0; }
+#simplemodal-login-container .user_pass,
+#simplemodal-login-container .user_login,
+#simplemodal-login-container .user_email,
+#simplemodal-login-container .wpcf7-text, #simplemodal-login-container .wpcf7-textarea { font-family:Arial; color:#333333; font-size:14px !important; width:97%; padding:3px; margin-top:0; margin-right:6px; margin-bottom:13px; border:1px solid #e5e5e5; background:#fbfbfb; line-height:normal;}
+#simplemodal-login-container .wpcf7-textarea { height:120px; }
+#simplemodal-login-container .rememberme {vertical-align:middle;}
+.simplemodal-login-activity {background:url(../img/default/loading.gif) center no-repeat; height:16px; margin-bottom:12px;}
+
+#simplemodal-login-container div.wpcf7 { padding:0 0 20px 0; }
+#simplemodal-login-container div#wpcf7-f2214-o2.wpcf7 { padding:0; }
+#simplemodal-login-container div.wpcf7 form { width:265px; margin: 0 auto; }

@@ -1,0 +1,9 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  (function(d, s) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  js = d.createElement(s); 
+  js.src = "//tags.extole.com/732469989/core.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script'));
+
+});

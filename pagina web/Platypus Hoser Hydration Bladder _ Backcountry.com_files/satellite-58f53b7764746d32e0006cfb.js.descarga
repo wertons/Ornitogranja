@@ -1,0 +1,21 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  (function(a,b,c,d,e,f,g) {
+  e['ire_o']=c;e[c]= e[c]||function(){(e[c].a=e[c].a||[]).push(arguments)};
+  f=d.createElement(b);
+  g=d.getElementsByTagName(b)[0];
+  f.async=1;
+  f.src=a;
+  f.onload = f.onreadystatechange = function() {
+    var rs = this.readyState;
+    if (rs && rs != 'complete' && rs != 'loaded') {
+      return;
+    }
+    
+    if (_satellite.getVar('Customer Id') && _satellite.getVar('Email Hash')) {
+        ire('identify', {customerId: _satellite.getVar('Customer Id'), customerEmail: _satellite.getVar('Email Hash')});
+    }
+  };
+  g.parentNode.insertBefore(f,g);
+})('//d.impactradius-event.com/A372572-d6b3-4464-8175-43afcdedc6dd1.js','script','ire',document,window);
+
+});
