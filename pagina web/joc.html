@@ -16,17 +16,100 @@
       <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
       <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
       <meta name="google-site-verification" content="yyq1wQP-nZzV3TmPC2IlOdo2bAY7v1PP9XeC_QRrQz8" />
-     
+    
    </head>
    <body>
+      <!-- barra navigation -->
+      <div class="dark">
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top negro">
+            <div class="container ">
+               <a href="index.html" style="width:40%;"><img id="logo" src="img/logo1.png"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Principal</a>
 
+                     </li>
+                            <li class="nav-item active">
+                        <a class="nav-link" href="joc.html">Joc</a>
+                 <span class="sr-only">(current)</span>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Tenda</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="coneixements.html">Coneixements</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </div>
       <!-- Page Content -->
-     
-      <div class="presentacio">
-
+      <span onclick="openNav()">
+         <div class="twitterbutton "><img src="img/twitter.png" style="width:50px;"> </div>
+      </span>
+      <div>
+         <div id="mySidenavig" class="sidenavig">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+           
+             
+             
+             <a class="twitter-timeline" href="https://twitter.com/ornitogranja?ref_src=twsrc%5Etfw">Tweets de Ornitogranja</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+             
+             
+             
+             
+             
+             
+             
+             
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <!-- /.col-lg-3 -->
+            <div class="col-lg-12 floatcenter">
+               <div class="card mt-4" style="background-color: rgba(255, 255, 255, 0.86)">
+<div style="margin: auto;margin-top: 20px;margin-bottom: 20px;"> <div  margin="auto" border-radius="20px"> <object  width="785px" height="500px"data="ornitogranja.swf"></object></div></div>
+               </div>
+               <!-- /.card -->
+               <div class="card card-outline-secondary my-4" style="background-color: rgba(255, 255, 255, 0.86)">
+    <div id="wpac-comment"style="margin: 15px;padding: 15px;"></div>
+                    <script type="text/javascript">
+                        wpac_init = window.wpac_init || [];
+                        wpac_init.push({widget: 'Comment', id: 9905});
+                        (function() {
+                            if ('WIDGETPACK_LOADED' in window) return;
+                            WIDGETPACK_LOADED = true;
+                            var mc = document.createElement('script');
+                            mc.type = 'text/javascript';
+                            mc.async = true;
+                            mc.src = 'https://embed.widgetpack.com/widget.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+                        })();
+                   </script>
+               </div>
+               <!-- /.card -->
+            </div>
+            <!-- /.col-lg-9 -->
+         </div>
       </div>
       <!-- /.container -->
-
+      <!-- Footer -->
+      <footer class="py-5 bg-dark">
+         <div class="container">
+            <p lass="text-center " style="color: white;font-size: 0.7em;text-align: justify;">  <img style="width: 8%;"src="img/puntcat.png">&nbsp&nbsp&nbsp&nbsp<img src="img/dinahosting.jpg" style="width: 10%;">&nbsp &nbsp&nbsp&nbsp<a rel="license" class="text-center " style="color: white;"href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+               <img alt="Llicència de Creative Commons" style="border-width:0;width: 10%;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>  &nbsp&nbsp&nbsp&nbsp Aquesta obra està subjecta a una llicència de <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="font-size: 1.1em;">Reconeixement-NoComercial-CompartirIgual 4.0 Internacional de Creative Commons</a>
+            </p>
+         </div>
+         <!-- /.container -->
+      </footer>
       <!-- Bootstrap core JavaScript -->
       <script src="jquery.min.js"></script>
       <script src="bootstrap.bundle.min.js"></script>
@@ -37,7 +120,6 @@
              popup.classList.toggle("show");
          }
       </script>
-
       <script>
          // Get the modal
          var modal = document.getElementById('myModal');
