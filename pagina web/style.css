@@ -307,12 +307,6 @@ body {
 .navbar-toggler-icon{
     float: right;
 }
-.presentacio{
-   background-color:rgba(255, 255, 255, 0.27);
-    height: 3000px  ;
-    width: 100%;
-    
-}
 #chevron {
   position: relative;
   text-align: center;
@@ -325,7 +319,7 @@ body {
 #chevron:before {
   content: '';
   position: absolute;
-  top: -150px;
+  top: 1000px;
   left: 0;
   height: 100%;
   width: 100%;
