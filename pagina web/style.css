@@ -307,8 +307,10 @@ body {
 .navbar-toggler-icon{
     float: right;
 }
-.pregame{
-   background-color:;
+.presentacio{
+   background-color:rgba(255, 255, 255, 0.27);
+    height: 3000px  ;
+    width: 100%;
     
 }
 #chevron {
