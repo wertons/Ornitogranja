@@ -307,27 +307,3 @@ body {
 .navbar-toggler-icon{
     float: right;
 }
-#chevron {
-  position: relative;
-  text-align: center;
-  padding: 12px;
-  margin-bottom: 6px;
-  height: 1000px;
-  width: 100%;
-}
-
-#chevron:before {
-  content: '';
-  position: absolute;
-  top: 1000px;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #246f08;
-  -webkit-transform: skew(0deg, 6deg);
-  -moz-transform: skew(0deg, 6deg);
-  -ms-transform: skew(0deg, 6deg);
-  -o-transform: skew(0deg, 6deg);
-  transform: skew(0deg, 6deg);
-}
-
